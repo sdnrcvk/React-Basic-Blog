@@ -57,6 +57,10 @@
   opacity: 0.7;
 }
 
+.blog-preview a{
+  text-decoration: none;
+}
+
 .loading{
   font-size: 50px;
   color: #ff793f;

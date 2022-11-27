@@ -1,15 +1,16 @@
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
         <nav className="navbar">
             <h1>Blog</h1>
             <div className="links">
-                <a href="/">Anasayfa</a>
-                <a href="/create" style={{
+                <Link to="/">Anasayfa</Link>
+                <Link to="/create" style={{
                     color:'white',
                     backgroundColor:'#ff793f',
                     borderRadius:'8px'
-                }}>Yeni Yazı</a>
+                }}>Yeni Yazı</Link>
             </div>
         </nav>
      );
