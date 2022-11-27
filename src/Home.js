@@ -3,38 +3,27 @@ import BlogList from "./BlogList";
 
 const Anasayfa = () => {
 
-    const [blogs,setBlogs]=useState([
-        {
-            ad:"Yeni Başlayanlar İçin C#",
-            aciklama:"lorem ipsum",
-            yazar:"luffy",
-            id:1
-        },
-        {
-            ad:"React Öğreniyorum",
-            aciklama:"lorem ipsum",
-            yazar:"zoro",
-            id:2
-        },        {
-            ad:"İleri Seviye C#",
-            aciklama:"lorem ipsum",
-            yazar:"luffy",
-            id:3
-        },
-        {
-            ad:"MVC Öğreniyorum",
-            aciklama:"lorem ipsum",
-            yazar:"sanji",
-            id:4
-        }
-    ])
-
-    const [isim,setIsim]=useState('luffy');
+    const [blogs,setBlogs]=useState(null)
+    const [yukleniyor,setYukleniyor]=useState(true)
+    const [hata,setHata]=useState(null)
 
     useEffect(()=>{
-        console.log("useEffect çalıştı")
-        console.log(blogs);
-    },[blogs,isim])
+        fetch(`http://localhost:8000/yazilar`)
+        .then(res=>{
+            if(!res.ok) throw Error('Veriler çekilemedi')
+                
+            return res.json();
+        })
+        .then(data=>{
+            //console.log(data);
+            setBlogs(data);
+            setYukleniyor(false);
+        })
+        .catch(err=>{
+            setYukleniyor(false);
+            setHata(err.message);
+        })
+    },[])
 
     const handleClick=(id)=>{
         const newBlogs=blogs.filter(blog=>blog.id!==id);
@@ -43,9 +32,9 @@ const Anasayfa = () => {
 
     return (  
         <div className="home">
-            <BlogList bloglar={blogs} baslik="Bütün Yazılar" handleClick={handleClick}/>
-        <br></br>
-        <button onClick={()=>setIsim('zoro')}>Değiştir</button>
+            {hata && <div className="error">{hata}</div>}
+            {yukleniyor && <div className="loading">Yükleniyor...</div>}
+            {blogs && <BlogList bloglar={blogs} baslik="Bütün Yazılar" handleClick={handleClick}/>}
         </div>
     );
 }
