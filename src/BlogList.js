@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function BlogList({bloglar,baslik,handleClick}) {
+export default function BlogList({bloglar,baslik}) {
 
     return (
     <div className="blog-list">
@@ -10,7 +10,6 @@ export default function BlogList({bloglar,baslik,handleClick}) {
         <div className="blog-preview" key={blog.id}>
             <h2>{blog.ad}</h2>
             <p>Yazının yazarı : {blog.yazar}</p>
-            <button onClick={()=>handleClick(blog.id)}>Sil</button>
         </div>
     ))}
     </div>
