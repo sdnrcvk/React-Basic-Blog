@@ -3,6 +3,8 @@ import Anasayfa from "./Home";
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import Create from "./Create";
 import BlogDetails from "./BlogDetails";
+import NotFound from "./NotFound";
+
 /*
 const name="Sedanur";
 const surname="Çevik";
@@ -33,6 +35,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails/>
+            </Route>
+            <Route path="*">
+              <NotFound/>
             </Route>
           </Switch>
         </div>

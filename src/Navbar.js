@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 const Navbar = () => {
     return ( 
         <nav className="navbar">
-            <h1>Blog</h1>
+            <Link to="/"><h1>Blog</h1></Link>
             <div className="links">
-                <Link to="/">Anasayfa</Link>
+                <Link to="/">Ana Sayfa</Link>
                 <Link to="/create" style={{
                     color:'white',
                     backgroundColor:'#ff793f',

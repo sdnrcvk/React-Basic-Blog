@@ -2,7 +2,7 @@ import React,{ useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const Create = () => {
-    
+
     const history=useHistory()
     const [baslik,setBaslik]=useState('')
     const [aciklama,setAciklama]=useState('')
@@ -45,9 +45,9 @@ const Create = () => {
                 <option value="zoro">Zoro</option>
                 <option value="sanji">Sanji</option>
             </select>
-            <button>Ekle</button>
-            {baslik}
-            {aciklama}
+            <button>Ekle</button> <br/>
+            {baslik} <br/>
+            {aciklama} <br/>
             {yazar}
         </form>
         
