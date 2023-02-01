@@ -5,7 +5,7 @@ export default function BlogList({bloglar,baslik}) {
 
     return (
     <div className="blog-list">
-    <h2 style={{color:'#ff793f'}}>{baslik}</h2>
+    <h2 style={{color:'#bd3aa8fd'}}>{baslik}</h2>
     {bloglar.map((blog)=>(
         <div className="blog-preview" key={blog.id}>
             <Link to={`/blogs/${blog.id}`}>

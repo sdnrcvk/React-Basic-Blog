@@ -16,7 +16,7 @@
 }
 
 .navbar h1{
-  color: #ff793f;
+  color: #bd3aa8fd;
 }
 
 .navbar .links{
@@ -30,7 +30,7 @@
 }
 
 .navbar a:hover{
-  color:#ff793f;
+  color:#bd3aa8fd;
 }
 
 .content{
@@ -52,9 +52,9 @@
 
 .blog-preview h2{
   font-size: 30px;
-  color: #3c6382;
+  color: #eb7420;
   margin-bottom: 8px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .blog-preview a{
@@ -63,7 +63,7 @@
 
 .loading{
   font-size: 50px;
-  color: #ff793f;
+  color: #bd3aa8fd;
 }
 
 .error{
@@ -73,7 +73,7 @@
 
 .blog-details h2{
   font-size: 30px;
-  color: #3c6382;
+  color: #eb7420;
   margin-bottom: 10px;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .create button{
-  background-color: #ff793f;
+  background-color: #bd3aa8fd;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -110,7 +110,14 @@
   cursor: pointer;
 }
 
-
+.blog-details button{
+  background-color: #c93a38fd;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 
 
