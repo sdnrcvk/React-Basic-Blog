@@ -1,4 +1,4 @@
-## React-Temel Blog Projesi
+## Basic Blog
 
 ![image](https://user-images.githubusercontent.com/58807892/216163353-94757355-374b-4618-83ad-378c5ca5a162.png)
 ![image](https://user-images.githubusercontent.com/58807892/216163447-3d787346-d0fc-4af8-a4e6-8f6bd66afd7f.png)
